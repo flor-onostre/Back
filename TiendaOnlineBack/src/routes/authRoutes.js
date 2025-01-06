@@ -1,5 +1,6 @@
-const express = require('express');
-const { registerUser, loginUser } = require('../controllers/authController');
+import express from 'express';
+import { registerUser, loginUser } from '../controllers/authController.js';
+
 const router = express.Router();
 
 // Registro de usuario
@@ -8,4 +9,5 @@ router.post('/register', registerUser);
 // Login de usuario
 router.post('/login', loginUser);
 
-module.exports = router;
+// Exporta el router como exportación predeterminada
+export const authRoutes = router;
