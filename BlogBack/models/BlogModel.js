@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Autor from "./AutorModel.js";
 
 const blogSchema = new mongoose.Schema({
     id: { type: String, required: true, unique:true },

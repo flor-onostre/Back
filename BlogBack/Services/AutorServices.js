@@ -11,13 +11,13 @@ export const getAutor = async (id) => {
     return autor
 }
 
-export const postAutor = async (nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil) => {
-    const autor = await Autor.create({id:crypto.randomUUID(),nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil});
+export const postAutor = async (nombre,fechaNacimiento,redSocial,fotoPerfil) => {
+    const autor = await Autor.create({id:crypto.randomUUID(),nombre,fechaNacimiento,redSocial,fotoPerfil});
     return autor
 }
 
-export const putAutor = async (id,nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil) => {
-    const autor = await Autor.findOneAndUpdate({id:id},{nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil})
+export const putAutor = async (id,nombre,fechaNacimiento,redSocial,fotoPerfil) => {
+    const autor = await Autor.findOneAndUpdate({id:id},{nombre,fechaNacimiento,redSocial,fotoPerfil})
     return autor
 }
 

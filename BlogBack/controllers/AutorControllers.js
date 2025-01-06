@@ -25,13 +25,13 @@ export const getAutorController = async (req, res) => {
 }
 export const postAutorController = async (req, res) => {
     try {
-        const {nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil} = req.body;
+        const {nombre,fechaNacimiento,redSocial,fotoPerfil} = req.body;
         
-        if (!nombre || !bibliografia || !fechaNacimiento || !redSocial || !fotoPerfil) {
+        if (!nombre || !fechaNacimiento || !redSocial || !fotoPerfil) {
             return res.status(400).json({status: "error", menssage: "faltan datos", data:{}});
         }
         
-        const autor = await postAutor(nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil);
+        const autor = await postAutor(nombre,fechaNacimiento,redSocial,fotoPerfil);
         
         if(autor){
             return res.status(201).json({status: "success", menssage: "autor creado", data:autor});
@@ -47,13 +47,13 @@ export const postAutorController = async (req, res) => {
 export const putAutorController = async (req, res) => {
     try {
         const id = req.params.id;
-        const {nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil} = req.body;
+        const {nombre,fechaNacimiento,redSocial,fotoPerfil} = req.body;
 
-        if (!nombre || !bibliografia || !fechaNacimiento || !redSocial || !fotoPerfil) {
+        if (!nombre || !fechaNacimiento || !redSocial || !fotoPerfil) {
             return res.status(400).json({status: "error", menssage: "faltan datos", data:{}});
         }
 
-        let autor = await putAutor(id,nombre,bibliografia,fechaNacimiento,redSocial,fotoPerfil);
+        let autor = await putAutor(id,nombre,fechaNacimiento,redSocial,fotoPerfil);
 
         if (autor) {
             autor = await getAutor(id);

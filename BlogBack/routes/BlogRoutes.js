@@ -7,10 +7,10 @@ import { authMiddleware } from "../middlewares/authMiddleware.js";
 const routerBlog = express.Router();
 
 routerBlog.get("/",getblogscontroller)
-routerBlog.get("/:id",/*validationIdBlog,validationMiddleware,*/getblogcontroller)
-routerBlog.get("/populado/:id",/*validationIdBlog,validationMiddleware,*/getblogPopuladocontroller) 
-routerBlog.post("/",/*authMiddleware,validationPostBlog,validationMiddleware,*/createblogcontroller) 
-routerBlog.put("/:id",/*validationPostBlog,validationIdBlog,validationMiddleware,*/updateblogcontroller)
-routerBlog.delete("/:id",/*validationIdBlog,validationMiddleware,*/deleteblogcontroller)
+routerBlog.get("/:id",validationIdBlog,validationMiddleware,getblogcontroller)
+routerBlog.get("/populado/:id",validationIdBlog,validationMiddleware,getblogPopuladocontroller) 
+routerBlog.post("/",authMiddleware,validationPostBlog,validationMiddleware,createblogcontroller) 
+routerBlog.put("/:id",validationPostBlog,validationIdBlog,validationMiddleware,updateblogcontroller)
+routerBlog.delete("/:id",validationIdBlog,validationMiddleware,deleteblogcontroller)
 
 export default routerBlog;
