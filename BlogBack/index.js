@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import connectDB from './config/mongodb.js';
 import EjemploRoutes from './routes/EjemploRoutes.js';
 import routerBlog from './routes/BlogRoutes.js';
+import routerAutor from './routes/AutorRoutes.js';
 
 dotenv.config();
 connectDB();
@@ -19,6 +20,7 @@ app.use(express.json());
 app.get('/test', (req, res) => res.send('Prueba exitosa'));
 app.use('/ejemplo', EjemploRoutes);
 app.use("/blogs", routerBlog);
+app.use("/autores", routerAutor);
 
 
 app.listen(PORT, () => {
