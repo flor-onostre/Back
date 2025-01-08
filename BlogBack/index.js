@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cors(
     {
     origin: "*",
-    allowedHeaders: ["Content-Type", "Authorization","x-refresh-token"],
+    allowedHeaders: ["Content-Type", "Authorization","x-refresh-token", "x-no-compression", "x-access-token", "x-token", "x-token-expiration", "x-token-uuid", "x-token-uuid-expiration", 'GET', 'POST', 'PUT', 'DELETE'],
   }
 ));
 
