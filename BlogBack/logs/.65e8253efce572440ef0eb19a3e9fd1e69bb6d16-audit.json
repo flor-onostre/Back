@@ -11,9 +11,20 @@
             "hash": "a79c2e825421d624a82b53467ccab536246d842f2ee6eddbd1abedd4fcc6cb1a"
         },
         {
+<<<<<<< HEAD
             "date": 1736347417659,
             "name": "logs\\application-2025-01-08-11.log",
             "hash": "b814bd8ac72146675bed0c7b4f6714b75d332949622ab31476511ec365adc094"
+=======
+            "date": 1736343469760,
+            "name": "logs\\application-2025-01-08-10.log",
+            "hash": "ccbb34e09a1a9c30b54de3f73b8faacf38a0ab566320fb2160aa55271847c650"
+        },
+        {
+            "date": 1736344817119,
+            "name": "logs\\application-2025-01-08-11.log",
+            "hash": "b1647451740fbdecbfdfadf91b59687a85f9d4bda5b959ec33ce0d259242b16d"
+>>>>>>> feed64068135a048c68ffbcab1c0019de5f24437
         }
     ],
     "hashType": "sha256"
