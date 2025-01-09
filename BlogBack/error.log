@@ -6,3 +6,5 @@
 {"level":"error","message":"POST /blogs","timestamp":"2025-01-08T14:07:46.662Z"}
 {"level":"error","message":"POST /blogs","timestamp":"2025-01-08T14:08:49.671Z"}
 {"level":"error","message":"POST /blogs","timestamp":"2025-01-08T14:09:47.579Z"}
+{"level":"error","message":"GET /autores/","timestamp":"2025-01-09T00:06:36.270Z"}
+{"level":"error","message":"GET /autores/99fc9180-75c1-4509-a675-b14438da8da6","timestamp":"2025-01-09T00:06:43.363Z"}

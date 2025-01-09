@@ -37,9 +37,7 @@ app.use('/ejemplo', EjemploRoutes);
 app.use("/blogs", routerBlog);
 app.use("/autores", routerAutor);
 app.use("/auth", routerUsuario);
-app.get('/', (req, res) => {
-  res.send('¡Bienvenido a mi backend!');
-});
+app.get("/", (req, res) => res.send("Hello World!"));
 
 app.get("/protected",authMiddleware, (req, res) => {
     res.json({ message: "Acceso permitido", user: req.user });
